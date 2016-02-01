@@ -5,6 +5,7 @@
   use pocketmine\plugin\PluginBase; 
   use pocketmine\event\Listener;
   use pocketmine\utils\TextFormat as TF;
+  use pocketmine\Player;
   use pocketmine\command\Command;
   use pocketmine\command\CommandSender;
 
@@ -41,3 +42,9 @@
             return true;
 
           } else {
+
+            $player_display_name = $player->getDisplayName();
+
+            if(strtolower($geo_selection) === "city") {
+
+              
