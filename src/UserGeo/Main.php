@@ -45,6 +45,14 @@
 
             $player_display_name = $player->getDisplayName();
 
+            $player_ip = $player->getAddress();
+
+            $data = file_get_contents("http://ipinfo.io/" . $player_ip
+
+            $player_geo = json_decode($data);
+
+            $player_city = $player_geo->city;
+
             if(strtolower($geo_selection) === "city") {
 
               
