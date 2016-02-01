@@ -98,3 +98,25 @@
               $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
 
               $sender->sendMessage(TF::GREEN . $name . "'s Carrier: " . $player_carrier . "!");
+
+              return true;
+
+            } else {
+
+              $sender->sendMessage(TF::RED . "Error: " . $geo_selection . " was not recognised.");
+
+              return true;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+?>
