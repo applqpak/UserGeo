@@ -23,7 +23,7 @@
 
         if(!(isset($args[0]) and isset($args[1]))) {
 
-          $sender->sendMessage(TF::RED . "Error: not enough args. Usage: /usergeo <player> < city | hostname | region | country | carrier >");
+          $sender->sendMessage(TF::RED . "Error: not enough args. Usage: /usergeo <player> < city | hostname | region | country >");
 
           return true;
 
