@@ -47,7 +47,7 @@
 
             $player_ip = $player->getAddress();
 
-            $data = file_get_contents("http://ipinfo.io/" . $player_ip
+            $data = file_get_contents("http://ipinfo.io/" . $player_ip);
 
             $player_geo = json_decode($data);
 
@@ -55,4 +55,6 @@
 
             if(strtolower($geo_selection) === "city") {
 
-              
+              $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
+
+              $sender->sendMessage(TF::GREEN . $name . "'s City: " . $player_city . "!");
