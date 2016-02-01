@@ -53,8 +53,28 @@
 
             $player_city = $player_geo->city;
 
+            $player_hostname = $player_geo->hostname;
+
+            $player_region = $player_geo->region;
+
             if(strtolower($geo_selection) === "city") {
 
               $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
 
               $sender->sendMessage(TF::GREEN . $name . "'s City: " . $player_city . "!");
+
+              return true;
+
+            } else if(strtolower($geo_selection) === "hostname") {
+
+              $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
+
+              $sender->sendMessage(TF::GREEN . $name . "'s Hostname: " . $player_hostname . "!");
+
+              return true;
+
+            } else if(strtolower($geo_selection) === "region") {
+
+              $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
+
+              $sender->sendMessage(TF::GREEN . $name . "'s Region: " . $player_region . "!");
