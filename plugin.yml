@@ -6,7 +6,7 @@ main: UserGeo\Main
 commands:
   usergeo:
     description: Get A Users Geo Location!
-    usage: "/usergeo <player> < city | hostname | region | country | carrier >"
+    usage: "/usergeo <player> < city | hostname | region | country >"
     aliases: [geo]
     permission: usergeo.command
 permissions:
