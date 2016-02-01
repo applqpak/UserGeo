@@ -4,6 +4,7 @@
 
   use pocketmine\plugin\PluginBase; 
   use pocketmine\event\Listener;
+  use pocketmine\utils\TextFormat as TF;
   use pocketmine\command\Command;
   use pocketmine\command\CommandSender;
 
@@ -21,4 +22,22 @@
 
         if(!(isset($args[0]) and isset($args[1]))) {
 
-          $sender->sendMessage(TF::RED . "Error: not enough args. Usage: /usergeo <player> < 
+          $sender->sendMessage(TF::RED . "Error: not enough args. Usage: /usergeo <player> < city | hostname | region | country | carrier >");
+
+          return true;
+
+        } else {
+
+          $geo_selection = $args[1];
+
+          $name = $args[0];
+
+          $player = $this->getServer()->getPlayer($name);
+
+          if($player === null) {
+
+            $sender->sendMessage(TF::RED . "Player " . $name . " could not be found.");
+
+            return true;
+
+          } else {
