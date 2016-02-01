@@ -59,8 +59,6 @@
 
             $player_country = $player_geo->country;
 
-            $player_carrier = $player_geo->carrier;
-
             if(strtolower($geo_selection) === "city") {
 
               $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
@@ -90,14 +88,6 @@
               $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
 
               $sender->sendMessage(TF::GREEN . $name . "'s Country: " . $player_country . "!");
-
-              return true;
-
-            } else if(strtolower($geo_selection) === "carrier") {
-
-              $sender->sendMessage(TF::YELLOW . "<---- [ Gathering Info... ] ---->");
-
-              $sender->sendMessage(TF::GREEN . $name . "'s Carrier: " . $player_carrier . "!");
 
               return true;
 
